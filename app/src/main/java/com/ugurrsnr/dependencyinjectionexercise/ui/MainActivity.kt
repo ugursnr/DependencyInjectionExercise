@@ -33,5 +33,6 @@ class MainActivity : AppCompatActivity() {
         lars.sing()
 
         println(myClass.myFunction())
+        println(myClass.secondFunction())
     }
 }

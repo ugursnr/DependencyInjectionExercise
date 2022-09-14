@@ -1,6 +1,7 @@
 package com.ugurrsnr.dependencyinjectionexercise.module
 
 import com.google.gson.Gson
+import com.ugurrsnr.dependencyinjectionexercise.SecondInterfaceImplementor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,10 +13,17 @@ import javax.inject.Singleton
 @Module
 class MyModule{
 
+    @FirstImplementor
     @Singleton
     @Provides
     fun providerFunction() : MyInterface {
         return InterfaceImplementor()
+    }
+    @SecondImplementor
+    @Singleton
+    @Provides
+    fun secondProvider() : MyInterface {
+        return SecondInterfaceImplementor()
     }
 
     //Working with external libraries
