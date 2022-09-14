@@ -1,4 +1,4 @@
-package com.ugurrsnr.dependencyinjectionexercise
+package com.ugurrsnr.dependencyinjectionexercise.musician
 
 import javax.inject.Inject
 

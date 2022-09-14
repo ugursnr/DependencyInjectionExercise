@@ -2,9 +2,8 @@ package com.ugurrsnr.dependencyinjectionexercise.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ugurrsnr.dependencyinjectionexercise.Band
-import com.ugurrsnr.dependencyinjectionexercise.Instrument
-import com.ugurrsnr.dependencyinjectionexercise.Musician
+import com.ugurrsnr.dependencyinjectionexercise.module.ClassExample
+import com.ugurrsnr.dependencyinjectionexercise.musician.Musician
 import com.ugurrsnr.dependencyinjectionexercise.R
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -15,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     //Field Injection
     @Inject
     lateinit var lars : Musician //it's not initialized
+
+    @Inject
+    lateinit var myClass : ClassExample
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,5 +31,7 @@ class MainActivity : AppCompatActivity() {
          */
 
         lars.sing()
+
+        println(myClass.myFunction())
     }
 }
